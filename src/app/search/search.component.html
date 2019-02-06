@@ -1,17 +1,24 @@
-<h1>My Goals</h1>
-<div class="container">
+<div class="row">
 
-    <div class="row">
-        <blockquote class="text-center text-lg">
-            <p>{{search.searchs}}</p>
-            <footer><cite>{{search.author}}</cite></footer>
-        </blockquote>
-    </div>
-    
-</div>
-<!-- <ng-progress></ng-progress>
-<h1>My Search</h1> -->
-
-<!-- <p>
-  search works!
-</p -->
+    <form class="chastine">
+   
+      <label>Search:
+    <input type="text" class="form-control" placeholder="Enter Username..." name="inputName" [(ngModel)]="inputName" autofocus>
+   </label>
+   
+   <button type="Submit" (click)="submitRepos()"  class="btn btn-secondary"><i class="fa fa-search"></i></button>
+   </form>
+   
+    <blockquote>
+      <img src="{{search.avatar_url}}" width="200" height="250">
+      <p><strong> Name:</strong> {{search.name}}</p>
+      <p><strong>Repositories:</strong> {{search.public_repos}}</p>
+      <p><strong>Followers: </strong>{{search.followers}}</p>
+      <p><strong>Following: </strong> {{search.following}}</p>
+      <a href="{{search.html_url}}" target="_blank">Link to the github page</a>
+   
+   
+   
+      <footer><cite>{{search.location}}</cite></footer>
+    </blockquote>
+   </div>
